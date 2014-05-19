@@ -32,8 +32,8 @@
 
 	<!-- 让Spring通过自动扫描来查询和管理Bean -->
 	<context:component-scan base-package="com.*" />
-	<import resource="spring-aop.xml" />
-	<import resource="shiro/spring-shiro.xml" />
-	<import resource="spring-dao.xml" />
+	<!-- <import resource="spring-aop.xml" /> -->
+	<!-- <import resource="shiro/spring-shiro.xml" /> -->
+	<!-- <import resource="spring-dao.xml" /> -->
 
 </beans>
