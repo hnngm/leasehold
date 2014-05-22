@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.leasehold.mapper.HouseInfoMapper">
+	<resultMap id="bridgeConstructionProgramMap" type="com.leasehold.model.HouseInfo">
+	</resultMap>
+	<sql id="tableName">webgis_bridge_construction_program</sql>
+	<sql id="bridgeConstructionProgramColumn">bridgeConstructionProgram_id,bridgeCode,bulletinMedia,projectLegal,designUnits,designReview,oversightProcedures,permit,create_time,update_time
+	</sql>
+
+	<select id="findById" resultMap="bridgeConstructionProgramMap">
+	</select>
+	
+	<select id="findByObj" resultMap="bridgeConstructionProgramMap">
+	</select>
+
+	<select id="find" resultMap="bridgeConstructionProgramMap">
+	</select>
+	<insert id="save">
+	</insert>
+
+	<update id="update">
+	</update>
+
+	<delete id="delete">
+    </delete>
+
+</mapper>
