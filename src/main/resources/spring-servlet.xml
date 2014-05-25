@@ -9,8 +9,15 @@
    	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
 			<bean class="com.common.util.UTF8StringHttpMessageConverter" />
-			<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+			<!-- <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
 			  <property name="objectMapper" ref="dateJSONObjectMapper"></property>  
+			</bean> -->
+			<bean
+				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper">
+					<bean
+						class="com.knappsack.swagger4springweb.util.ScalaObjectMapper" />
+				</property>
 			</bean>
 		</mvc:message-converters>
 		
@@ -24,6 +31,7 @@
 	<mvc:resources mapping="/css/**" location="/css/" />
 	<mvc:resources mapping="/html/**" location="/html/" />
 	<mvc:resources mapping="/api/**" location="/api/" />
+	<mvc:resources mapping="/swagger-ui/**" location="/swagger-ui/" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
