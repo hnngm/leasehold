@@ -334,7 +334,7 @@ function program3(depth0,data) {
 function program5(depth0,data) {
   
   
-  return "\n          <h4>Parameters</h4>\n          <table class='fullwidth'>\n          <thead>\n            <tr>\n            <th style=\"width: 100px; max-width: 100px\">Parameter</th>\n            <th style=\"width: 310px; max-width: 310px\">Value</th>\n            <th style=\"width: 200px; max-width: 200px\">Description</th>\n            <th style=\"width: 100px; max-width: 100px\">Parameter Type</th>\n            <th style=\"width: 220px; max-width: 230px\">Data Type</th>\n            </tr>\n          </thead>\n          <tbody class=\"operation-params\">\n\n          </tbody>\n          </table>\n          ";
+  return "\n          <h4>Parameters</h4>\n          <table class='fullwidth'>\n          <thead>\n            <tr>\n            <th style=\"width: 100px; max-width: 100px\">参数</th>\n            <th style=\"width: 310px; max-width: 310px\">值</th>\n            <th style=\"width: 200px; max-width: 200px\">描述</th>\n            <th style=\"width: 100px; max-width: 100px\">参数类型</th>\n            <th style=\"width: 220px; max-width: 230px\">数据类型</th>\n            </tr>\n          </thead>\n          <tbody class=\"operation-params\">\n\n          </tbody>\n          </table>\n          ";
   }
 
 function program7(depth0,data) {
@@ -1074,19 +1074,19 @@ function program1(depth0,data) {
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "');\">Show/Hide</a>\n    </li>\n    <li>\n      <a href='#' onclick=\"Docs.collapseOperationsForResource('";
+    + "');\">显示/隐藏</a>\n    </li>\n    <li>\n      <a href='#' onclick=\"Docs.collapseOperationsForResource('";
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "'); return false;\">\n        List Operations\n      </a>\n    </li>\n    <li>\n      <a href='#' onclick=\"Docs.expandOperationsForResource('";
+    + "'); return false;\">\n        列表操作\n      </a>\n    </li>\n    <li>\n      <a href='#' onclick=\"Docs.expandOperationsForResource('";
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "'); return false;\">\n        Expand Operations\n      </a>\n    </li>\n    <li>\n      <a href='";
+    + "'); return false;\">\n        展开\n      </a>\n    </li>\n    <li>\n      <a href='";
   if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "'>Raw</a>\n    </li>\n  </ul>\n</div>\n<ul class='endpoints' id='";
+    + "'>JSON</a>\n    </li>\n  </ul>\n</div>\n<ul class='endpoints' id='";
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
