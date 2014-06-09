@@ -10,7 +10,8 @@
 		<mvc:message-converters register-defaults="true">
 			<bean class="com.common.util.UTF8StringHttpMessageConverter" />
 			<!-- <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
-			  <property name="objectMapper" ref="dateJSONObjectMapper"></property>  
+			  	<property name="objectMapper" ref="dateJSONObjectMapper">
+				</property> 
 			</bean> -->
 			<bean
 				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
