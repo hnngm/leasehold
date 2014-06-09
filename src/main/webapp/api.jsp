@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>swagger4spring-web-example API documentation</title>
+    <title>api</title>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
 
     <link href='<c:url value='/swagger-ui/css/highlight.default.css' />' media='screen'
