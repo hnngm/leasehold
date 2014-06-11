@@ -24,8 +24,6 @@
 	<mvc:resources mapping="/images/**" location="/images/" />
 	<mvc:resources mapping="/css/**" location="/css/" />
 	<mvc:resources mapping="/html/**" location="/html/" />
-	<mvc:resources mapping="/api/**" location="/api/" />
-	<mvc:resources mapping="/swagger-ui/**" location="/swagger-ui/" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
