@@ -1,18 +1,15 @@
 package com.system.controller;
 
-import java.util.HashMap;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.common.util.Message;
 import com.system.model.User;
-import com.wordnik.swagger.annotations.ApiParam;
 
 
 /** 
@@ -22,7 +19,7 @@ import com.wordnik.swagger.annotations.ApiParam;
 * @date 2014-5-19 下午04:58:03 
 *  
 */
-@RestController
+@Controller
 @RequestMapping(value = "/user", produces = {"application/json", "application/xml"})
 public class UserController {
 
