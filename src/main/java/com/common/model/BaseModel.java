@@ -11,71 +11,73 @@ import java.util.Date;
 public class BaseModel implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private String id = null;
-	private Date createTime = null;
-	private Date updateTime = null;
-	private Integer isDelete = null;
 
-	/**
-	 * @return createTime
+	/***
+	 * 创建人
 	 */
+	private String createUser;
+	/***
+	 * 创建时间
+	 */
+	private Date createTime;
+
+	/***
+	 * 修改人
+	 */
+	private String updateUser;
+
+	/***
+	 * 修改时间
+	 */
+	private Date updateTime;
+
+	/***
+	 * 删除标示
+	 */
+	private Boolean isDelete;
+
+	public String getCreateUser() {
+		return createUser;
+	}
+
+	public void setCreateUser(String createUser) {
+		this.createUser = createUser;
+	}
+
 	public Date getCreateTime() {
 		return createTime;
 	}
 
-	/**
-	 * @param createTime
-	 *            createTime
-	 */
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
 
-	/**
-	 * @return updateTime
-	 */
+	public String getUpdateUser() {
+		return updateUser;
+	}
+
+	public void setUpdateUser(String updateUser) {
+		this.updateUser = updateUser;
+	}
+
 	public Date getUpdateTime() {
 		return updateTime;
 	}
 
-	/**
-	 * @param updateTime
-	 *            updateTime
-	 */
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
 
-	/**
-	 * @return isDelete
-	 */
-
-	public Integer getIsDelete() {
+	public Boolean getIsDelete() {
 		return isDelete;
 	}
 
-	/**   
-	 * @param isDelete the isDelete to set   
-	 */
-
-	public void setIsDelete(Integer isDelete) {
+	public void setIsDelete(Boolean isDelete) {
 		this.isDelete = isDelete;
 	}
 
-	/**
-	 * @return id
-	 */
-
-	public String getId() {
-		return id;
-	}
-
-	/**   
-	 * @param id the id to set   
-	 */
-
-	public void setId(String id) {
-		this.id = id;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }

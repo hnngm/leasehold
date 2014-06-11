@@ -24,9 +24,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
-import org.apache.shiro.subject.Subject;
-
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion.User;
 
 public class Helper {
 
@@ -198,11 +195,11 @@ public class Helper {
 	 * @return  
 	 * @author ning.han@baidao.com
 	 */
-	public static User getLoginUser() {
+	/*public static User getLoginUser() {
 		Subject subject = SecurityUtils.getSubject();
 		User loginUser = (User) subject.getPrincipal();
 		return loginUser;
-	}
+	}*/
 
 	public static Session getSession() {
 		return SecurityUtils.getSubject().getSession();
