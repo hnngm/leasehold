@@ -11,6 +11,7 @@ public interface Dialect {
 
 	public static enum Type {
 		
+
 		MYSQL {
 			public String getValue() {
 				return "mysql";
@@ -45,5 +46,7 @@ public interface Dialect {
 	 * @return 返回数据库相关的分页SQL语句
 	 */
 	public abstract String getPageSql(String sql, int offset, int limit);
+
+	public String getCountString(String querySelect);
 
 }

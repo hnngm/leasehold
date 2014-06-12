@@ -32,7 +32,7 @@ public class MySqlPage implements Dialect {
 	 * @param querySelect
 	 * @return
 	 */
-	public static String getCountString(String querySelect) {
+	public String getCountString(String querySelect) {
 
 		querySelect = getLineSql(querySelect);
 		int orderIndex = getLastOrderInsertPoint(querySelect);

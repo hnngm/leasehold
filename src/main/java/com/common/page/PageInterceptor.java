@@ -128,24 +128,26 @@ public class PageInterceptor implements Interceptor {
 		//获取到我们自己写在Mapper映射语句中对应的Sql语句  
 		String sql = boundSql.getSql();
 		//通过查询Sql语句获取到对应的计算总记录数的sql语句  
-		String querySelect = SQLUtil.getLineSql(sql);
-		StringBuffer sb = new StringBuffer();
-		int formIndex = SQLUtil.getAfterFormInsertPoint(querySelect);
-		sb.append("select count(0) count ");
-		sb.append(querySelect.substring(formIndex, querySelect.length()));
 
-		String countSql = sb.toString(); //记录统计     
+		String queryCountSelect = dialect.getCountString(sql);//SQLUtil.getLineSql(sql);
+		//StringBuffer sb = new StringBuffer();
+		//int formIndex = SQLUtil.getAfterFormInsertPoint(querySelect);
+		//sb.append("select count(0) count ");
+		//sb.append(querySelect.substring(formIndex, querySelect.length()));
+
+		//String countSql = sb.toString(); //记录统计     
 		//通过BoundSql获取对应的参数映射  
 		List<ParameterMapping> parameterMappings = boundSql.getParameterMappings();
 		//利用Configuration、查询记录数的Sql语句countSql、参数映射关系parameterMappings和参数对象page建立查询记录数对应的BoundSql对象。  
-		BoundSql countBoundSql = new BoundSql(mappedStatement.getConfiguration(), countSql, parameterMappings, page);
+		BoundSql countBoundSql = new BoundSql(mappedStatement.getConfiguration(), queryCountSelect, parameterMappings,
+				page);
 		//通过mappedStatement、参数对象page和BoundSql对象countBoundSql建立一个用于设定参数的ParameterHandler对象  
 		ParameterHandler parameterHandler = new DefaultParameterHandler(mappedStatement, page, countBoundSql);
 		//通过connection建立一个countSql对应的PreparedStatement对象。  
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			pstmt = connection.prepareStatement(countSql);
+			pstmt = connection.prepareStatement(queryCountSelect);
 			//通过parameterHandler给PreparedStatement对象设置参数  
 			parameterHandler.setParameters(pstmt);
 			//之后就是执行获取总记录数的Sql语句和获取结果了。  

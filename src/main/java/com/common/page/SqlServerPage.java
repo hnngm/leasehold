@@ -18,4 +18,9 @@ package com.common.page;
 			return pageSql.toString();
 		}
 
+	public String getCountString(String querySelect) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -27,6 +27,11 @@ public class OraclePage implements Dialect {
 		return pageSql.toString();
 	}
 
+	public String getCountString(String querySelect) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
 
 
